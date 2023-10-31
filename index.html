@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" />
+    <title>Spotify App</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./spotifylogo.png" alt="Spotify image" />
+        <span>Spotify</span>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>No copyright Songs</h1>
+      <div class="songlist"></div>
+    </div>
+
+    <div class="footer">
+      <input class="seekbar" type="range" value="0" />
+      <div class="icons">
+        <i class="fa-solid fa-backward-step"></i>
+        <i class="fa-solid fa-play" id="play"></i>
+        <i class="fa-solid fa-forward-step"></i>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/cb13027782.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="songslist.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
