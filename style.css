@@ -71,6 +71,10 @@ nav ul {
   display: flex;
   gap: 8px;
 }
+.fa-play,
+.fa-pause {
+  cursor: pointer;
+}
 
 .footer {
   display: flex;
