@@ -41,7 +41,7 @@ const songsList = [
   },
   {
     name: "Thunder- Imagine Dragons",
-    path: "songs/thunder.mp3",
+    path: "songs/Thunder.mp3",
     time: "3:03",
     coverImage: "https://i.ytimg.com/vi/GtEvysh1654/maxresdefault.jpg",
   },
