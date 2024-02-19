@@ -105,16 +105,25 @@ const makeAllPlay = () => {
 
 playButtons.forEach((button) => {
   button.addEventListener("click", (element) => {
-    makeAllPlay();
+    {
+      if (audioElement.paused || audioElement.currentTime == 0) {
+        makeAllPlay();
+        element.target.classList.remove("fa-play");
+        element.target.classList.add("fa-pause");
+        audioElement.play();
+        playElement.classList.remove("fa-play");
+        playElement.classList.add("fa-pause");
 
-    element.target.classList.remove("fa-play");
-    element.target.classList.add("fa-pause");
-
-    audioElement.src = button.dataset.songName;
-    audioElement.currentTime = 0;
-    audioElement.play();
-
-    playElement.classList.remove("fa-play");
-    playElement.classList.add("fa-pause");
+        audioElement.src = button.dataset.songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+      } else {
+        audioElement.pause();
+        playElement.classList.remove("fa-pause");
+        playElement.classList.add("fa-play");
+        element.target.classList.remove("fa-pause");
+        element.target.classList.add("fa-play");
+      }
+    }
   });
 });
